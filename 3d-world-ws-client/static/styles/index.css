@@ -1,0 +1,46 @@
+body {
+    background-color: lavender;
+    color: black;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+button{
+    background-color: #ffdb75;
+    color: black;
+    width: 400px;
+    height: 80px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    outline: none;
+}
+
+select{
+    background-color: #ffffff;
+    color: black;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    outline: none;
+    width: 300px;
+}
+
+button:hover{
+    background-color: #fff0ab;
+    cursor: pointer;
+}
+
+#centerBox{
+    padding: 25px;
+    margin: 0 auto;
+    background-color: white;
+    width: 950px;
+    height: 900px;
+    border: solid 1px black;
+    z-index: 1;
+}

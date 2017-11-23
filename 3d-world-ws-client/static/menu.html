@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <link rel = "stylesheet" type = "text/css" href = "./styles/menu.css"/>
+</head>
+<body>
+
+<div id = "centerBox" align="center">
+    <h1>Главное меню</h1>
+    <hr>
+
+    <div style = "padding-top: 20px"></div>
+    <button onclick="window.location = 'redactor.html';">Создать новый уровень</button>
+
+    <div style = "padding-top: 20px"></div>
+    <button onclick = "redactorLevelShowBox()">Редактировать существующий уровень</button>
+
+    <div style = "padding-top: 20px"></div>
+    <button onclick = "startTrainingShowBox()">Запустить тренировку на уровне</button>
+	
+	 <div style = "padding-top: 20px"></div>
+    <button onclick = "  window.location = '/';  ">Выход</button>
+
+    <div style = "padding-top: 30px"></div>
+
+    <div id = "contentRedactorLevel" hidden>
+        <h2>Выбор уровня для редактирования</h2>
+        <div style = "padding-top: 15px"></div>
+        <div id = "levelContentFirst"></div>
+    </div>
+
+    <div id = "contentStartTraining" hidden>
+        <h2>Выбор уровня для запуска тренировки</h2>
+        <div style = "padding-top: 15px"></div>
+        <div id = "listOfBoxesForStartTraining"></div>
+    </div>
+</div>
+
+<script src = "scripts/menuScript.js"></script>
+
+</body>
+</html>

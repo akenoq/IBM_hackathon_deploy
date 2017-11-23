@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>График</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const adressUrlServer = localStorage.getItem("ADRESS_OF_SERVER") + "";
+</script>
+
+<h1>Построение графика</h1>
+<hr>
+
+<style>
+    .tdClass{
+        padding: 15px;
+        background-color: #CCCCCC;
+        border: solid 2px blue;
+    }
+</style>
+
+<br>
+
+<table>
+    <tr>
+        <td id = 'q1' class = 'tdClass' onclick = "first()">FIRST<br>Обучение</td>
+        <td id = 'q2' class = 'tdClass' onclick = "second()">SECOND<br>Работа</td>
+    </tr>
+</table>
+
+<br>
+
+<canvas width = '1000' height = '400' id='can'></canvas>
+
+<br>
+<br>
+
+<p>Мастаб по X</p>
+<input type = "text" id = "t_x" value = '2'>
+
+<p>Масштаб по Y</p>
+<input type = "text" id = "t_y" value = '2'>
+
+<br>
+<br>
+
+<style>
+    td {
+        padding: 15px;
+        background-color: aqua;
+        cursor: pointer;
+    }
+</style>
+
+<h3>Движение</h3>
+<p>Скорость движения</p>
+<input type = "text" id = "t_speed" value = '10'>
+<br>
+<br>
+<table>
+    <tr>
+        <td id = "k1" onclick = "fff(1);"><--</td>
+        <td id = "k2"  onclick = "fff(2);" style = "background: green">Стоп</td>
+        <td id = "k3"  onclick = "fff(3);">--></td>
+    </tr>
+</table>
+
+<script>
+    function elem(s) {
+        return document.getElementById(s.toString());
+    }
+
+    let type = "STOP";
+
+    function fff(n) {
+        elem("k1").style.background = "aqua";
+        elem("k2").style.background = "aqua";
+        elem("k3").style.background = "aqua";
+
+        if(n === 1) {
+            elem("k1").style.background = "green";
+            type = "LEFT";
+        }
+
+        if(n === 2) {
+            elem("k2").style.background = "green";
+            type = "STOP";
+        }
+
+        if(n === 3) {
+            elem("k3").style.background = "green";
+            type = "RIGHT";
+        }
+    }
+</script>
+
+<script src = "code.js"></script>
+
+</body>
+</html>

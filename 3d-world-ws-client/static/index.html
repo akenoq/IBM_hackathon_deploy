@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <link rel = "stylesheet" type = "text/css" href = "./styles/index.css"/>
+</head>
+<body>
+
+<style>
+    p {
+        font-size: 20px;
+    }
+
+    .inpFieldClass {
+        font-size: 20px;
+        padding: 7px;
+        width: 500px;
+        border: solid 2px #666666;
+        outline: none;
+    }
+</style>
+
+<div id = "centerBox">
+    <h1>Добро пожаловать в систему</h1>
+    <hr>
+    <br>
+    <br>
+
+
+    <p>Адрес сервера</p>
+    <span style = "padding-left: 20px"></span>
+    <input type = "text" id = 't1' class = "inpFieldClass" value = "ws://localhost:5007/" spellcheck = 'false' autocomplete = 'off'>
+
+    <p>Имя пользователя</p>
+    <span style = "padding-left: 20px"></span>
+    <input type = "text" id = 't2' class = "inpFieldClass"  value = "Иван" spellcheck = 'false' autocomplete = 'off'>
+
+    <br>
+    <br>
+
+    <div style = "padding-top: 20px" align = "left">
+            <button onclick = "f()" style="background-color: lightsalmon; font-size: 20px;">Далее</button>
+    </div>
+</div>
+
+<script>
+    function elem(s) {
+        return document.getElementById(s.toString());
+    }
+
+    function f() {
+        const SERVER_ADRESS = elem('t1').value.toString();
+        const USER_NAME = elem('t2').value.toString();
+
+        localStorage.setItem("SERVER_ADRESS", SERVER_ADRESS);
+        localStorage.setItem("USER_NAME", USER_NAME);
+
+        window.location = 'menu.html';
+    }
+</script>
+
+</body>
+</html>

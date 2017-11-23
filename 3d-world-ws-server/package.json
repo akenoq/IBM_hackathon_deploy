@@ -1,0 +1,27 @@
+{
+  "name": "world3d-sw-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxim218/world3d-host.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxim218/world3d-host/issues"
+  },
+  "homepage": "https://github.com/maxim218/world3d-host#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "http": "0.0.0",
+    "request": "^2.83.0",
+    "ws": "^3.3.1"
+  }
+}

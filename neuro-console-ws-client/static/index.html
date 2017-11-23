@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Рисование</title>
+    <style>
+        body {
+            padding: 30px;
+            font-size: 20px;
+        }
+
+        .imp {
+            font-size: 20px;
+            padding: 10px;
+            width: 500px;
+            border: solid 2px #585858;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            width: 300px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+
+        button:hover {
+            background-color: #2ec2ed;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Рисование</h1>
+<hr>
+
+<p>Адрес сервера</p>
+<input type = "textField" id = "tttt" class = "imp" value = "ws://localhost:5005/">
+<br>
+<br>
+<button onclick="f()">Далее</button>
+
+<script>
+    function f() {
+        const ADRESS_OF_SERVER = document.getElementById("tttt").value.toString();
+        localStorage.setItem("ADRESS_OF_SERVER", ADRESS_OF_SERVER);
+        window.location = "drawing.html";
+    }
+</script>
+
+</body>
+</html>

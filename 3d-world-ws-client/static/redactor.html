@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>redactor</title>
+    <link rel = "stylesheet" type = "text/css" href = "./styles/redactor.css"/>
+</head>
+<body>
+
+<div id = "fon" hidden></div>
+<div id = "messageWindow" hidden>
+    <h2>Сообщение</h2>
+    <hr>
+    <div align = "center">
+        <div style = "padding-top: 20px"></div>
+        <span style = "font-size: 20px" id = "wwwText"></span>
+        <div style = "padding-top: 20px"></div>
+        <button style = "width: 150px; height: 40px;" onclick = "elem('fon').hidden = true; elem('messageWindow').hidden = true;">OK</button>
+    </div>
+</div>
+
+<div id = "centerBox">
+    <h1 align="center">Разработка уровней</h1>
+    <hr>
+
+    <div id = "menu">
+        <button onclick = "setType(this)">Стены</button>
+        <button onclick = "setType(this)">Машины X</button>
+        <button onclick = "setType(this)">Машины Z</button>
+        <button onclick = "setType(this)">Стартовая позиция</button>
+        <button onclick = "setType(this)">Финишная позиция</button>
+        <span style = "padding-left: 25px"></span>
+        <span id = "type">Стены</span>
+
+        <div style = "padding-top: 20px"></div>
+
+        <button style="background-color: #f2f2f2" onclick = "buildSetka(); buildPerimaterOfWalls();">Очистить</button>
+        <button style="background-color: lightsalmon;" onclick = "window.location = 'menu.html';">Главное меню</button>
+
+        <div style = "padding-top: 20px"></div>
+
+        <span>Название уровня</span>
+        <span style = "padding-left: 15px"></span>
+        <input type = "text" id = "nameLevelField" class = "impField" spellcheck = 'false' autocomplete = 'off' maxlength="10">
+        <span style = "padding-left: 15px"></span>
+        <button style="background-color: #73eb7f;" onclick = "saveLevel()">Сохранить</button>
+    </div>
+
+    <canvas width = '500px' height = '500px' id = 'can'></canvas>
+</div>
+
+<script src = "scripts/redactorScript.js"></script>
+
+</body>
+</html>

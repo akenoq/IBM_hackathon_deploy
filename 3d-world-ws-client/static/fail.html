@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>fail</title>
+    <link rel = "stylesheet" type = "text/css" href = "./styles/fail.css"/>
+</head>
+<body>
+
+<div id = "centerBox" align="center">
+    <h1>Результат тренировки</h1>
+    <hr>
+    <div style = "padding-top: 20px"></div>
+    <div>
+        <h1 style="color: lightsalmon">К сожалению, вы потерпели неудачу.</h1>
+
+        <div style = "padding-top: 20px"></div>
+        <button onclick = "restartLevel()">Перезапустить уровень</button>
+
+        <div style = "padding-top: 20px"></div>
+        <button onclick = "window.location = 'menu.html';" style="background-color: lightsalmon;">Главное меню</button>
+    </div>
+</div>
+
+<script>
+    function restartLevel(){
+        let contentFromURL = window.location.search;
+
+        if(contentFromURL.indexOf("?") === -1){
+            return "";
+        }
+
+        let mass = [];
+        mass = contentFromURL.split("?");
+
+        window.location = "world.html" + "?" + mass[1].toString();
+    }
+</script>
+
+</body>
+</html>

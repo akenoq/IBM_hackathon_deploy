@@ -1,0 +1,27 @@
+{
+  "name": "world3d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "prestart": "./node_modules/webpack/bin/webpack.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxim218/world3d.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxim218/world3d/issues"
+  },
+  "homepage": "https://github.com/maxim218/world3d#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "request": "^2.83.0",
+    "webpack": "^3.7.1"
+  }
+}
