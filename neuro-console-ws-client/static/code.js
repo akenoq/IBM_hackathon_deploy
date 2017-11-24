@@ -1,5 +1,13 @@
 "use strict";
 
+//////////////////////////////
+
+let xxx_1 = 0;
+let xxx_2 = 0;
+let xxx_3 = 0;
+
+//////////////////////////////
+
 let can = null;
 let holst = null;
 
@@ -65,7 +73,7 @@ window.onload = function() {
     holst = can.getContext('2d');
 
     holst.lineWidth = 1;
-    holst.fillStyle = '#15f7ff';
+    holst.fillStyle = '#512142';
 
     let myInter = setInterval(() =>{
         t_x = parseFloat(elem("t_x").value);
@@ -94,6 +102,10 @@ window.onload = function() {
             socket.send("__" + mode + "__");
         } catch (err) { }
 
+
+        if(type === "STOP") {
+            dx = -xxx_1 * t_x + 800;
+        }
 
         drawFon();
         drawGarphics();
@@ -142,10 +154,6 @@ function drawGarphics() {
 
 
 ////////////////////////////////////
-
-let xxx_1 = 0;
-let xxx_2 = 0;
-let xxx_3 = 0;
 
 socket.onopen = function() {
     console.log("Соединение установлено");
